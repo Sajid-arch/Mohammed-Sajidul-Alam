@@ -949,6 +949,20 @@ section.ls div.container div.d-flex div.col-12 img.img-fluid{
    /* Education & Experience Section Style Start  */
 
 
+    section.EdEx{
+    padding: 4rem 0;
+    }
+
+   section.EdEx div.container h3.pb-3{
+    color: var(--btn-bg-clr);
+   }
+
+   section.EdEx div.container h2.edex-heading{
+    font-weight: 600;
+   }
+
+
+
 
    /* Education & Experience Section Style End  */
 
