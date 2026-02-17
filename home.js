@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 
 
 
-    const handleOnMouseMove = e => {
+    const handleOnMouseMoveOtherEx = e => {
     const { currentTarget: target } = e;
 
 
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 
 
     for(const otherEx of document.querySelectorAll(".other-ex")) {
-        otherEx.onmousemove = e => handleOnMouseMove(e);
+        otherEx.onmousemove = e => handleOnMouseMoveOtherEx(e);
     }
 
 
@@ -256,7 +256,7 @@ function startAnimation(bar) {
 // For Latest Services Info Box Start
 
 
-const handleOnMouseMove2 = e => {
+const handleOnMouseMoveLs = e => {
     const { currentTarget: target } = e;
 
 
@@ -272,13 +272,44 @@ const handleOnMouseMove2 = e => {
 
 
 
-    for(const otherEx of document.querySelectorAll(".ls-info")) {
-        otherEx.onmousemove = e => handleOnMouseMove(e);
+    for(const Ls of document.querySelectorAll(".ls-info")) {
+        Ls.onmousemove = e => handleOnMouseMoveLs(e);
     }
 
 
 
 
 // For Latest Services Info Box End
+
+
+
+// For Education & Experience Info Box Start
+
+
+const handleOnMouseMoveEd = e => {
+    const { currentTarget: target } = e;
+
+
+    const rect = target.getBoundingClientRect(),
+
+    x = e.clientX - rect.left,
+    y = e.clientY - rect.top;
+
+    
+    target.style.setProperty("--mouse-x", `${x}px`);
+    target.style.setProperty("--mouse-y", `${y}px`);
+    }
+
+
+
+    for(const Ed of document.querySelectorAll(".ed-info")) {
+        Ed.onmousemove = e => handleOnMouseMoveEd(e);
+    }
+
+
+
+
+
+// For Education & Experience Info Box End
 
 

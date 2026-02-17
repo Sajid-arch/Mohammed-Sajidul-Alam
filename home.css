@@ -12,8 +12,14 @@
     scroll-behavior: smooth;
 }
 
+    html, body {
+    overflow-x: clip;
+    position: relative;
+}
+
 body {
     font-family: "Rajdhani", sans-serif!important;
+
 }
 
 :root {
@@ -67,15 +73,17 @@ header.solid{
     opacity: 1;
 }
 
+header div.container{
+    flex-wrap: wrap;
+}
+
 header div.container div.logo{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.5rem 1.5rem 0.8rem 0;
 }
-header div.container div.logo img{
-    max-height: 3.5rem;
-}
+
 
 
 
@@ -160,7 +168,6 @@ header div.container div.labels label::after{
     transition: all ease 0.5s;
 }
 header div.container div.labels label i{
-    font-size: 1.6rem;
     color: var(--text-clr);
     z-index: 3;
 }
@@ -394,6 +401,7 @@ section.hero {
     position: relative;
     z-index: 1;
 }
+
     
 section.hero::before{
     content: "";
@@ -680,13 +688,11 @@ div.something:hover::after{
    }
 
    section.skill-bar div.container div.row div.ex-num-wrap div.ex-num span{
-    font-size: 10.5rem;
     font-weight: 700;
     color: var(--btn-bg-clr);
    }
 
    section.skill-bar div.container div.row div.ex-num-wrap div.ex-num h3{
-    font-size: 3.5rem;
     font-weight: 700;
    }
 
@@ -756,7 +762,7 @@ section.skill-bar div.container div.skills{
 
 section.skill-bar div.container div.skills h2.pb-4{
     font-size:2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--header-font-clr);
 
 }
@@ -953,7 +959,7 @@ section.ls div.container div.d-flex div.col-12 img.img-fluid{
     padding: 4rem 0;
     }
 
-   section.EdEx div.container h3.pb-3{
+   section.EdEx div.container h3.pb-2{
     color: var(--btn-bg-clr);
    }
 
@@ -961,14 +967,188 @@ section.ls div.container div.d-flex div.col-12 img.img-fluid{
     font-weight: 600;
    }
 
+   section.EdEx div.container h2.pb-4{
+    font-size:2.5rem;
+    font-weight: 600;
+    color: var(--header-font-clr);
+
+}
+
+section.EdEx div.container div.row div.ed-info{
+    background-color: var(--content-bg);
+    height: 100%;
+    border-radius: 1.25rem;
+    position: relative;
+   }
+
+
+
+   .ed-info:hover::after{
+    opacity: 1;
+}
+.ed-info:hover::before{
+    opacity: 0;
+}
+
+.ed-info::before, 
+.ed-info::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transition: opacity 0.5s;
+
+
+}
+
+.ed-info::before{
+    background: radial-gradient(1600px circle at 90% 270% , var(--btn-bg-clr), transparent 40%);
+    z-index: 1;
+    opacity: 1;
+}
+
+    
+
+
+.ed-info > .ed-info-content{
+    height: calc(100% - 6px);
+    width: calc(100% - 6px);
+    background: var(--content-bg);
+    border-radius: 1rem;
+    margin: 3px 3px 3px 3.5px;
+    z-index: 2;
+    position: relative;
+    padding: 1.9rem;
+}
+
+.ed-info::after{
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y) , var(--btn-bg-clr), transparent 40%);
+    z-index: 1;
+    opacity: 0;
+}
+
+
+section.EdEx div.container div.ed-wrap{
+    gap: 6rem;
+}
+
+section.EdEx div.container div.row div.ed-wrap div.ed-info-wrap div.ed-info div.ed-info-content h4.pb-3{
+    font-weight: 600;
+}
+
+
+section.EdEx div.container div.row div.ed-info-wrap:nth-child(1){
+    animation-range: entry 30% cover 40%;
+}
+section.EdEx div.container div.row div.ed-info-wrap:nth-child(2){
+    animation-range: entry 35% cover 45%;
+}
+section.EdEx div.container div.row div.ed-info-wrap:nth-child(3){
+    animation-range: entry 40% cover 50%;
+}
+section.EdEx div.container div.row div.ed-info-wrap:nth-child(4){
+    animation-range: entry 45% cover 55%;
+}
+
+
 
 
 
    /* Education & Experience Section Style End  */
 
 
+
+   /* My Latest Projects Style Start  */
+
+   section.lp{
+    padding: 4rem 0;
+   }
+
+   section.lp div.container h3.pb-2{
+    color: var(--btn-bg-clr);
+   }
+   
+   section.lp div.container h2.lp-heading{
+    font-weight: 600;
+   }
+
+
+
+   /* My Latest Projects Style End  */
+
+
    /* Skills Section Style Start  */
 
+   section.mskill{
+    padding: 4rem 0;
+   }
+
+   section.mskill div.container h3.pb-2{
+    color: var(--btn-bg-clr);
+   }
+
+   section.mskill div.container h2.mskill-heading{
+    font-weight: 600;
+   }
+
+   section.mskill div.container div.d-flex div.mskill-card{
+    border-top: 2px solid var(--progressbar-bg);
+    position: relative;
+   }
+   section.mskill div.container div.d-flex div.mskill-card div{
+    z-index: 2;
+   }
+
+   section.mskill div.container div.d-flex div.mskill-card:nth-child(1)::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-bg-clr);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    transition: transform 0.5s ease;
+    pointer-events: none;
+   }
+
+    section.mskill div.container div.d-flex:has(.mskill-card:nth-child(2):hover) .mskill-card:nth-child(1)::after {
+    transform:translateY(100%);
+    }
+
+    section.mskill div.container div.d-flex:has(.mskill-card:nth-child(3):hover) .mskill-card:nth-child(1)::after{
+    transform:translateY(200%);
+    }
+
+    section.mskill div.container div.d-flex div.mskill-card div.mskill-icon i{
+        font-size: 3rem;
+    }
+
+    section.mskill div.container div.d-flex div.mskill-card div.skillname h3{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    section.mskill div.container div.d-flex div.mskill-card div.skillname p{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    section.mskill div.container div.d-flex div.mskill-card div a{
+        color: var(--header-font-clr);
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+
+    section.mskill div.container div.d-flex div.mskill-card div a i{
+        font-size: 2rem;
+    }
 
 
    /* Skills Section Style End  */
