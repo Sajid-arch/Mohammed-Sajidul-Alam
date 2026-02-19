@@ -38,6 +38,7 @@ body {
     --transparent-bg-clr:rgba(0,0,0,0.05);
     --content-bg:#F2F2F2;
     --progressbar-bg:#f4f4f4;
+    --border: #d9dce1;
 }
 
 
@@ -170,13 +171,26 @@ header div.container div.labels label::after{
 header div.container div.labels label i{
     color: var(--text-clr);
     z-index: 3;
+    font-size: 1rem;
 }
+
+header div.container div.labels label i.fa-bars{
+    display: none;
+}
+
 header div.container div.labels label:hover::after{
     right: 100%;
     top: 0;
 }
 header div.container div.labels label:hover i{
     color: var(--btn-bg-clr);
+    transition: all ease 0.5s;
+}
+header div.container div.labels label:hover i.fa-bars-staggered{
+    display: none;
+}
+header div.container div.labels label:hover i.fa-bars{
+    display: block;
 }
 header div.container div.labels div.icons{
     display: flex;
@@ -1076,6 +1090,26 @@ section.EdEx div.container div.row div.ed-info-wrap:nth-child(4){
    section.lp div.container h2.lp-heading{
     font-weight: 600;
    }
+
+   section.lp div.container div.row div.col-12 div.p-img-wrapper{
+    border: 2px solid var(--border);
+    background: var(--progressbar-bg);
+   }
+
+   section.lp div.container div.row div.col-12 div.p-img{
+    overflow: hidden;
+    transition: all ease 0.5s;
+   }
+
+   section.lp div.container div.row div.col-12 div.p-img img{
+    transition: all ease 0.5s;
+   }
+
+
+   section.lp div.container div.row div.col-12 div.p-img:hover img{
+    transform: scale(1.05);
+   }
+
 
 
 
