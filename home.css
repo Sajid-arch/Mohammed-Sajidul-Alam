@@ -245,7 +245,7 @@ div.sidebar{
     position: fixed;
     z-index: 1100;
     background-color: var(--text-clr);
-    transition: ease-in 0.5s , ease-out 1s;
+    transition: ease-in 0.05s , ease-out 1s;
     padding: 1.5rem;
     
 }
