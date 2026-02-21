@@ -17,12 +17,10 @@
 
 
     header div.container div.logo img{
-        max-height: 2.5rem;
+        max-height: 3.5rem;
     }
 
-    header div.container div.labels label i{
-        font-size: 1.4rem;
-    }
+    
 
     section.hero{
         height: auto;

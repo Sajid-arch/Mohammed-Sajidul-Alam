@@ -175,8 +175,10 @@ header div.container div.labels label::after{
 header div.container div.labels label i{
     color: var(--text-clr);
     z-index: 3;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
+
+
 
 header div.container div.labels label i.fa-bars{
     display: none;
@@ -340,6 +342,10 @@ div.sidebar div.ci a::after{
     background: var(--btn-bg-clr);
     z-index: 2;
     transition: all ease 0.5s;
+}
+
+div.sidebar h4.fmw{
+    color: var(--header-font-clr);
 }
 
 div.sidebar div.ci a i{
@@ -592,6 +598,10 @@ section.project-sum div.container div.row div.project-sum-wrapper div.project-su
     left:0;
 }
 
+section.project-sum div.container div.row div.project-sum-wrapper div.project-sum-card p{
+    color: var(--description-clr);
+}
+
 
 
 
@@ -706,6 +716,7 @@ div.something:hover::after{
 
    section.skill-bar div.container div.row div.ex-num-wrap p{
     font-size: 1rem;
+    color: var(--description-clr);
    }
 
    section.skill-bar div.container div.row div.ex-num-wrap div.ex-num span{
@@ -715,6 +726,14 @@ div.something:hover::after{
 
    section.skill-bar div.container div.row div.ex-num-wrap div.ex-num h3{
     font-weight: 700;
+    color: var(--header-font-clr);
+   }
+
+   section.skill-bar div.container div.row div.col-12 div.experiences div.row div.other-ex-wrap h4{
+    color: var(--header-font-clr);
+   }
+   section.skill-bar div.container div.row div.col-12 div.experiences div.row div.other-ex-wrap p{
+    color: var(--description-clr);
    }
 
 
@@ -835,6 +854,7 @@ section.skill-bar div.container div.skills div.skill h2{
     margin-top: 40px;
     margin-bottom: 10px;
     font-size: 1.5rem;
+    color: var(--header-font-clr);
     
 }
 
@@ -895,8 +915,13 @@ section.skill-bar div.container div.skills div.skill div.progress-bar div span{
     color: var(--btn-bg-clr);
    }
 
+   section.ls div.container p{
+    color: var(--description-clr);
+   }
+
    section.ls div.container h2.ls-heading{
     font-weight: 600;
+    color: var(--header-font-clr);
    }
 
 
@@ -963,13 +988,12 @@ section.ls div.container div.ls-wrap{
 
 section.ls div.container div.ls-wrap div.ls-info-wrap div.ls-info div.ls-info-content h4.pb-3{
     font-weight: 600;
+    color: var(--header-font-clr);
 }
 
 
 
-/* section.ls div.container div.row div.col-12 img.img-fluid{
-    max-width: 85%;
-} */
+
 
 
    /* Latest Sevices Section Style End  */
@@ -988,6 +1012,11 @@ section.ls div.container div.ls-wrap div.ls-info-wrap div.ls-info div.ls-info-co
 
    section.EdEx div.container h2.edex-heading{
     font-weight: 600;
+    color: var(--header-font-clr);
+   }
+
+   section.EdEx div.container p{
+    color: var(--description-clr);
    }
 
    section.EdEx div.container h2.pb-4{
@@ -1060,6 +1089,7 @@ section.EdEx div.container div.ed-wrap{
 
 section.EdEx div.container div.row div.ed-wrap div.ed-info-wrap div.ed-info div.ed-info-content h4.pb-3{
     font-weight: 600;
+    color: var(--header-font-clr);
 }
 
 
@@ -1096,6 +1126,11 @@ section.EdEx div.container div.row div.ed-info-wrap:nth-child(4){
    
    section.lp div.container h2.lp-heading{
     font-weight: 600;
+    color: var(--header-font-clr);
+   }
+
+   section.lp div.container p{
+    color: var(--description-clr);
    }
 
    section.lp div.container div.row div.col-12 div.p-img-wrapper{
@@ -1135,6 +1170,10 @@ section.EdEx div.container div.row div.ed-info-wrap:nth-child(4){
 
    section.mskill div.container h2.mskill-heading{
     font-weight: 600;
+    color: var(--header-font-clr);
+   }
+   section.mskill div.container p{
+    color: var(--description-clr);
    }
 
    section.mskill div.container div.d-flex div.mskill-card{
@@ -1171,11 +1210,13 @@ section.EdEx div.container div.row div.ed-info-wrap:nth-child(4){
 
     section.mskill div.container div.d-flex div.mskill-card div.mskill-icon i{
         font-size: 3rem;
+        color: var(--header-font-clr);
     }
 
     section.mskill div.container div.d-flex div.mskill-card div.skillname h3{
         font-size: 2rem;
         font-weight: 600;
+        color: var(--header-font-clr);
     }
 
     section.mskill div.container div.d-flex div.mskill-card div.skillname p{
@@ -1191,6 +1232,7 @@ section.EdEx div.container div.row div.ed-info-wrap:nth-child(4){
 
     section.mskill div.container div.d-flex div.mskill-card div a i{
         font-size: 2rem;
+        color: var(--header-font-clr);
     }
 
 
