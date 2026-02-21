@@ -39,6 +39,7 @@ body {
     --content-bg:#F2F2F2;
     --progressbar-bg:#f4f4f4;
     --border: #d9dce1;
+    --label-border: 2px;
 }
 
 
@@ -155,18 +156,13 @@ header div.container div.labels label{
     position: relative;
     z-index: 1;
     overflow: hidden;
-    border: 2px solid var(--btn-bg-clr);
+    border: var(--label-border) solid var(--btn-bg-clr);
 }
 header div.container div.labels label::after{
     content: "";
     position: absolute;
-    top: -0.1rem;
-    left: -0.1rem;
-    right: -0.1rem;
-    bottom: -0.1rem;
+    inset: calc(var(--label-border) * -1);
     background: var(--btn-bg-clr);
-    width: auto;
-    height: auto;
     z-index: 2;
     transition: all ease 0.5s;
     transform: scale(1);
