@@ -311,15 +311,38 @@ div.sidebar div.sidebar-head label{
     height: 2rem;
     border-radius: 50%;
     cursor: pointer;
+    /* transition: all ease 0.5s; */
+    background: var(--transparent);
+    position: relative;
+    z-index: 1;
+}
+div.sidebar div.sidebar-head label::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
     transition: all ease 0.5s;
-    background: transparent;
+    background: var(--btn-bg-clr);
+    transform: scale(0);
+    z-index: 2;
 }
 div.sidebar div.sidebar-head label i{
     font-size: 1.6rem;
     color: var(--header-font-clr);
+    z-index: 3;
 }
-div.sidebar div.sidebar-head label:hover{
-    background: var(--btn-bg-clr);
+div.sidebar div.sidebar-head label:hover i{
+    color: var(--text-clr);
+}
+
+div.sidebar div.sidebar-head label:hover::after{
+    transform: scale(1);
 }
 
 div.sidebar div.ci a{
