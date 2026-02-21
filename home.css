@@ -258,7 +258,6 @@ div.shadow {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(10px);
     z-index: 1100;
     opacity: 0;
     pointer-events: none;
