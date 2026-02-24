@@ -20,7 +20,7 @@
         max-height: 3.5rem;
     }
 
-    
+
 
     section.hero{
         height: auto;
@@ -143,10 +143,12 @@
     section.hero div.container div.hero-img h2.updown{
         top: 15%;
         left: 15%;
+        position: relative;
     }
     section.hero div.container div.hero-img h2.downup{
         bottom: 20%;
         left: 15%;
+        position: relative;
     }
 
     section.hero div.container div.hero-img{
@@ -212,9 +214,9 @@
     right: 0;
     }
 
-    section.project-sum{
+    /* section.project-sum{
         margin: 20rem 0 5rem;
-    }
+    } */
     
     section.skill-bar div.container div.row div.ex-num-wrap div.ex-num span{
     font-size: 5.5rem;
@@ -247,6 +249,8 @@
     .text{
         font-size: 0.9rem;
     }
+
+
 
     section.hero{
         height: 100vh;
@@ -325,9 +329,6 @@
     right: 0;
     }
 
-       section.project-sum{
-        margin: 0;
-    }
 
     section.skill-bar div.container div.row div.ex-num-wrap div.ex-num span{
     font-size: 9.5rem;
@@ -369,6 +370,7 @@
     header div.container div.labels label i {
             font-size: 1.6rem;
     }
+
 
     section.hero{
         height: 100vh;
@@ -444,11 +446,6 @@
     right: 0;
     }
 
-
-
-       section.project-sum{
-        margin: 0;
-    }
 
 
     div.experiences div.row div.other-ex h4{

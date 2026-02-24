@@ -35,6 +35,7 @@ body {
     --placeholder-text-clr:rgba(117, 117, 118);
     --transparent:#f1f1f1;
     --description-clr:#5d6570;
+    --invisible: rgba(0,0,0,0);
     --transparent-bg-clr:rgba(0,0,0,0.05);
     --content-bg:#F2F2F2;
     --progressbar-bg:#f4f4f4;
@@ -50,9 +51,9 @@ body {
 
 /* Header Style End  */
 header{
-    height: 12.5vh;
+    height: auto;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0);
+    background: var(--invisible);
     transition: all ease 0.5s;
     position: fixed;
     top: 0;
@@ -60,7 +61,7 @@ header{
     width: 100%;
 }
 header.transparent{
-    background: rgba(0, 0, 0, 0);
+    background: var(--invisible);
 }
 header.solid{
     background: var(--text-clr);
@@ -90,10 +91,10 @@ header div.container div.logo{
 
 
 div.menu a{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--header-font-clr);
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     cursor: pointer;
 }
 
@@ -260,6 +261,13 @@ div.shadow {
     transition: all ease 0.5s;
 }
 
+div.shadow:hover{
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><line x1='3' y1='3' x2='21' y2='21' stroke='white' stroke-width='2' stroke-linecap='round'/><line x1='21' y1='3' x2='3' y2='21' stroke='white' stroke-width='2' stroke-linecap='round'/></svg>") 12 12, crosshair;
+}
+
+/* div.shadow:hover{
+    cursor: url("Images/Cross\ 16.png")12 12,crosshair;
+} */
 
 div.sidebar div.icons a{
     width: 2.5rem;
@@ -1192,6 +1200,8 @@ section.EdEx div.container div.row div.ed-info-wrap:nth-child(4){
    }
    section.mskill div.container p{
     color: var(--description-clr);
+    transition: all ease 0.5s;
+    font-weight: 500;
    }
 
    section.mskill div.container div.d-flex div.mskill-card{
@@ -1217,13 +1227,27 @@ section.EdEx div.container div.row div.ed-info-wrap:nth-child(4){
     transition: transform 0.5s ease;
     pointer-events: none;
    }
+   section.mskill div.container div.d-flex div.mskill-card:nth-child(1) p{
+    color: var(--header-font-clr);
+   }
+
+   section.mskill div.container div.d-flex div.mskill-card:hover p{
+    color: var(--header-font-clr);
+   }
 
     section.mskill div.container div.d-flex:has(.mskill-card:nth-child(2):hover) .mskill-card:nth-child(1)::after {
     transform:translateY(100%);
     }
+    section.mskill div.container div.d-flex:has(.mskill-card:nth-child(2):hover) .mskill-card:nth-child(1) p{
+        color: var(--description-clr);
+    }
 
     section.mskill div.container div.d-flex:has(.mskill-card:nth-child(3):hover) .mskill-card:nth-child(1)::after{
     transform:translateY(200%);
+    }
+
+    section.mskill div.container div.d-flex:has(.mskill-card:nth-child(3):hover) .mskill-card:nth-child(1) p{
+    color: var(--description-clr);
     }
 
     section.mskill div.container div.d-flex div.mskill-card div.mskill-icon i{
@@ -1239,7 +1263,6 @@ section.EdEx div.container div.row div.ed-info-wrap:nth-child(4){
 
     section.mskill div.container div.d-flex div.mskill-card div.skillname p{
         font-size: 1.2rem;
-        font-weight: 500;
     }
 
     section.mskill div.container div.d-flex div.mskill-card div a{
