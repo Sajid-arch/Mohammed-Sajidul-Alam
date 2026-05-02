@@ -39,9 +39,7 @@
 
 
 
-    section.hero div.container div.hero-img img.img-fluid{
-        transform: translateY(-35px);
-    }
+
 
 
     .btn-1{
@@ -261,6 +259,7 @@
 
 
 
+
     .btn-1{
     width: 12.1rem;
     height: 3.9rem;
@@ -396,6 +395,7 @@
 
 
     section.hero{
+        max-height: 100vh;
         padding: 15vh 0 4rem;
     }
 
