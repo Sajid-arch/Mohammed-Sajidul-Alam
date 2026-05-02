@@ -464,6 +464,8 @@ section.hero {
     font-size: 5rem;
     position: relative;
     z-index: 1;
+    height: auto;
+    max-height: 100vh;
 }
 
     
@@ -519,8 +521,10 @@ section.hero div.container div.hero-text p{
 
 
 
+
 section.hero div.container div.hero-img {
     position: relative;
+    height: auto;
     
 }
 
