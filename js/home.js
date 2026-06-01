@@ -21,35 +21,43 @@ window.addEventListener('load', function() {
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Function to load external HTML into a selector
-    const loadComponent = (selector, fileUrl) => {
-        fetch(fileUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Failed to load ${fileUrl}: ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.querySelector(selector).innerHTML = data;
-                
-                // 🚀 HEADERS ARE READY: Initialize scroll logic here!
-                if (selector === '#header-placeholder') {
-                    initHeaderScroll();
-                    document.dispatchEvent(new CustomEvent('headerLoaded'));
-                }
-            })
-            .catch(error => console.error(error));
-    };
+    // Clean, easy async function definition
+    async function loadComponent(selector, fileUrl) {
+        try {
+            const response = await fetch(fileUrl);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            // Wait for the text content to arrive
+            const htmlContent = await response.text();
+            
+            // Inject it into the page element safely
+            const targetElement = document.querySelector(selector);
+            if (targetElement) {
+                targetElement.innerHTML = htmlContent;
+            }
 
-    // Load components
+            // Run your scroll animation setup once header is ready
+            if (selector === '#header-placeholder') {
+                initHeaderScroll();
+            }
+            
+        } catch (error) {
+            console.error(`Could not load component from ${fileUrl}:`, error);
+        }
+    }
+
+    // Call them cleanly line-by-line
     loadComponent('#header-placeholder', './components/header.html');
+    loadComponent('#sidebar-placeholder', './components/sidebar.html');
     loadComponent('#footer-placeholder', './components/footer.html');
 });
 
 
 
-// Fetching Header and Footer Code Start 
+// Fetching Header and Footer Code End 
 
 
 // Header Hide on Scroll Code Start 
@@ -384,14 +392,4 @@ const swiper = new Swiper('.swiper', {
 
 
 
-// Contact Section Moving Border Effect End 
 
-const formData = { name: "John", email: "john@example.com", subject: "Important message", message: "Hello!" };
-
-fetch('YOUR_GOOGLE_SCRIPT_DEPLOYMENT_URL', {
-    method: 'POST',
-    body: JSON.stringify(formData)
-})
-.then(res => res.json())
-.then(data => console.log("Saved to Google Sheets!"))
-.catch(err => console.error(err));
