@@ -229,7 +229,7 @@ header.transparent{
     background: var(--invisible);
 }
 header.solid{
-    background: var(--text-clr);
+    background: var(--progressbar-bg);
 }
 
 .hidden{
@@ -291,6 +291,21 @@ div.menu a:hover span{
     border-radius: 5px;
 }
 .blog-page div.menu a[href="https://sajid-arch.github.io/Mohammed-Sajidul-Alam-Blog/"] span{
+    color: var(--btn-bg-clr);
+    background: var(--btn-bg-light-clr);
+    border-radius: 5px;
+}
+.blog-page div.menu a[href="https://sajid-arch.github.io/Mohammed-Sajidul-Alam-Blog-Blog-1"] span{
+    color: var(--btn-bg-clr);
+    background: var(--btn-bg-light-clr);
+    border-radius: 5px;
+}
+.blog-page div.menu a[href="https://sajid-arch.github.io/Mohammed-Sajidul-Alam-Blog-Blog-2"] span{
+    color: var(--btn-bg-clr);
+    background: var(--btn-bg-light-clr);
+    border-radius: 5px;
+}
+.blog-page div.menu a[href="https://sajid-arch.github.io/Mohammed-Sajidul-Alam-Blog-Blog-3"] span{
     color: var(--btn-bg-clr);
     background: var(--btn-bg-light-clr);
     border-radius: 5px;
