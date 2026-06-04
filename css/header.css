@@ -114,11 +114,12 @@ header div.container div.labels label{
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all ease 0.5s;
+    transition: background 5s ease-out;
     position: relative;
     z-index: 1;
     overflow: hidden;
     border: var(--label-border) solid var(--btn-bg-clr);
+    background: var(--btn-bg-clr);
 }
 header div.container div.labels label::after{
     content: "";
@@ -145,6 +146,11 @@ header div.container div.labels label i{
 
 header div.container div.labels label i.fa-bars{
     display: none;
+}
+
+header div.container div.labels label:hover {
+    background: var(--invisible);
+    transition: background ease-in 0.1s; 
 }
 
 header div.container div.labels label:hover::after{

@@ -8,7 +8,7 @@
         font-size: 2.1rem;
     }
     .r-heading-1{
-        font-size: 3.3rem;
+        font-size: 3.1rem;
     }
     .text{
         font-size: 1rem;
@@ -37,12 +37,12 @@
 
     section.hero div.container div.hero-img h2.updown{
         top: 25%;
-        left: 5%;
+        left: 6%;
         position: relative;
     }
     section.hero div.container div.hero-img h2.downup{
         bottom: 12.5%;
-        left: 5%;
+        left: 6%;
         position: relative;
     }
 
@@ -98,6 +98,23 @@
     gap: 2rem;
 }
 
+}
+
+
+@media(min-width:450px) {
+        .r-heading-1{
+        font-size: 3.5rem;
+    }
+        section.hero div.container div.hero-img h2.updown{
+        top: 25%;
+        left: 6%;
+        position: relative;
+    }
+    section.hero div.container div.hero-img h2.downup{
+        bottom: 12.5%;
+        left: 6%;
+        position: relative;
+    }
 }
 
 
@@ -352,7 +369,7 @@
 
 
     section.hero div.container div.hero-img img.img-fluid{
-        transform: translateY(-38px);
+        transform: translateY(-15px);
     }
 
 
@@ -426,12 +443,13 @@
     }
  
     section.hero{
+        max-height: 190vh;
         padding: 5vh 0 4rem;
     }
 
 
     section.hero div.container div.hero-img img.img-fluid{
-        transform: translateY(0px);
+        transform: translateY(10px);
     }
 
 
@@ -448,7 +466,7 @@
 
 
     section.hero div.container{
-        transform: translateY(70px);
+        transform: translateY(30px);
     }
 
 
@@ -532,7 +550,7 @@
     }
 
         section.hero div.container div.hero-img img.img-fluid{
-        transform: translateY(-30px);
+        transform: translateY(-5px);
     }
 
 
