@@ -345,6 +345,50 @@ const handleOnMouseMoveEd = e => {
 // For Education & Experience Info Box End
 
 
+
+// My Skill Section Code Start
+
+const mSkillContainer = document.querySelector('.mskill-container');
+const mSkillCard = document.querySelectorAll('.mskill-card');
+const mSkillIndicator = document.querySelector('.mskill-indicator');
+
+function moveIndicator(element) {
+  // Get the exact position and width of the targeted box
+  const cardTop = element.offsetTop;
+  const cardHeight = element.offsetHeight;
+
+  // Assign these exact pixel values directly to the CSS variables
+  mSkillContainer.style.setProperty('--top', `${cardTop}px`);
+  mSkillContainer.style.setProperty('--height', `${cardHeight}px`);
+}
+
+// 1. Initialize the position on the default "active" item when page loads
+const activeBox = document.querySelector('.mskill-card.active');
+if (activeBox) {
+  moveIndicator(activeBox);
+}
+
+// 2. Track hover movements
+// 2. Track hover movements and dynamically update the active class
+mSkillCard.forEach(box => {
+  box.addEventListener('mouseenter', (e) => {
+    const currentCard = e.currentTarget;
+    
+    // Remove the 'active' class from whichever card currently has it
+    document.querySelector('.mskill-card.active')?.classList.remove('active');
+    
+    // Add the 'active' class to the newly hovered card
+    currentCard.classList.add('active');
+    
+    // Move the background pill
+    moveIndicator(currentCard);
+  });
+});
+
+
+// My Skill Section Code End
+
+
 // For Comment Section Swiper Start
 
 const swiper = new Swiper('.swiper', {
@@ -394,45 +438,5 @@ const swiper = new Swiper('.swiper', {
 
 
 
-// My Skill Section Code Start
 
-const mSkillContainer = document.querySelector('.mskill-container');
-const mSkillCard = document.querySelectorAll('.mskill-card');
-const mSkillIndicator = document.querySelector('.mskill-indicator');
-
-function moveIndicator(element) {
-  // Get the exact position and width of the targeted box
-  const cardTop = element.offsetTop;
-  const cardHeight = element.offsetHeight;
-
-  // Assign these exact pixel values directly to the CSS variables
-  mSkillContainer.style.setProperty('--top', `${cardTop}px`);
-  mSkillContainer.style.setProperty('--height', `${cardHeight}px`);
-}
-
-// 1. Initialize the position on the default "active" item when page loads
-const activeBox = document.querySelector('.mskill-card.active');
-if (activeBox) {
-  moveIndicator(activeBox);
-}
-
-// 2. Track hover movements
-// 2. Track hover movements and dynamically update the active class
-mSkillCard.forEach(box => {
-  box.addEventListener('mouseenter', (e) => {
-    const currentCard = e.currentTarget;
-    
-    // Remove the 'active' class from whichever card currently has it
-    document.querySelector('.mskill-card.active')?.classList.remove('active');
-    
-    // Add the 'active' class to the newly hovered card
-    currentCard.classList.add('active');
-    
-    // Move the background pill
-    moveIndicator(currentCard);
-  });
-});
-
-
-// My Skill Section Code End
 
