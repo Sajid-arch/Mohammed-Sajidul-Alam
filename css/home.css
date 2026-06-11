@@ -952,9 +952,6 @@ section.skill-bar div.container div.skills div.skill div.progress-bar div span{
 }
 
 
-section.ls div.container div.ls-wrap{
-    row-gap: 6rem;
-}
 
 section.ls div.container div.ls-wrap div.ls-info-wrap div.ls-info div.ls-info-content h4.pb-3{
     font-weight: 600;
