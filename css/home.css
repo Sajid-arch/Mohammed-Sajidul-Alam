@@ -1195,16 +1195,6 @@ section.mskill div.container div.d-flex div.mskill-card.active div p{
         font-size: 1.2rem;
     }
 
-    section.mskill div.container div.d-flex div.mskill-card div a{
-        color: var(--header-font-clr);
-        font-weight: 500;
-        font-size: 1.25rem;
-    }
-
-    section.mskill div.container div.d-flex div.mskill-card div a i{
-        font-size: 2rem;
-        color: var(--header-font-clr);
-    }
 
 
    /* Skills Section Style End  */
